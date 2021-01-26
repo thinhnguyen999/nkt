@@ -1,0 +1,1131 @@
+{% extends 'information_nkt/base_main.html' %} {% block content %}
+<div class="col-sm-12">
+    <div class="well " style="text-transform: uppercase; margin-top: 12px;">
+        SỬA THÔNG TIN NGƯỜI KHUYẾT TẬT
+    </div>
+    <div class="container mt-3" style="max-width: 1400px!important;">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs ">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">THÔNG TIN CHUNG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">KHUYẾT TẬT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu2">NHU CẦU</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu3">HỖ TRỢ ĐÃ NHẬN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu4">HƯỚNG NGHIỆP CHO NKT</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane active"><br>
+                <div class="wrapper">
+
+                    <form id="myForm" action="{% url 'repair_info_nkt' pk %}" method="POST">
+                        {% csrf_token %}
+                        <div class="tab">
+                            <h4>Thông tin NKT </h4>
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Họ, chữ đệm và tên khai sinh NKT (*)
+                                    </label> {{form_sua.ho_ten_khai_sinh_nkt}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Nơi đăng ký khai sinh
+                                    </label> {{form_sua.noi_dk_khai_sinh}}
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Quê quán
+                                    </label> {{form_sua.que_quan}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Địa chỉ thường trú
+                                    </label> {{form_sua.dia_chi_thuong_tru}}
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Số TT NKT
+                                    </label> {{form_sua.so_tt_nkt}}
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Ngày sinh
+                                    </label>
+                                    <div>
+                                        {{form_sua.ngay_sinh_nkt}}
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Số định danh
+                                    </label> {{form_sua.so_dinh_danh}}
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Số hiệu xác nhận NKT
+                                    </label> {{form_sua.so_hieu_giay_xac_nhan}}
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Giới tính
+                                    </label>{{form_sua.gioi_tinh}}
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Số CMND
+                                    </label>{{form_sua.so_cmnd}}
+                                    <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Quốc tịch
+                                    </label> {{form_sua.quoc_tich}}
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Dân tộc
+                                    </label> {{form_sua.dan_toc}}
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Tôn giáo
+                                    </label>{{form_sua.ton_giao}}
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Nhóm máu
+                                    </label>{{form_sua.nhom_mau}}
+                                    <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Trình độ học vấn
+                                    </label>{{form_sua.trinh_do}}
+                                    <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Trình độ chuyên môn
+                                    </label>{{form_sua.chuyen_mon}}
+                                    <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Nghề nghiệp hiện nay
+                                    </label>{{form_sua.nghe_nghiep}}
+                                    <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Là nạn nhân chất độc da cam
+                                    </label>{{form_sua.nan_nhan_da_cam}}
+                                    <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Tình trạng hôn nhân
+                                    </label>{{form_sua.hon_nhan}}
+                                    <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Tổng số con
+                                    </label>{{form_sua.tong_so_con}}
+                                    <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-3">
+                                    <label for="">
+                                        Số con dưới 16 tuổi
+                                    </label> {{form_sua.so_con_duoi_16}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Thông tin liên lạc NKT</h4>
+                            <div class=" form-row " style="margin-bottom:25px ;">
+                                <div class="col-sm-12">
+                                    <label for="">
+                                        Địa chỉ liên lạc NKT
+                                    </label> {{form_sua.dia_chi}}
+                                </div>
+                            </div>
+
+                            <div class="form-row ">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Số điện thoại liên hệ NKT
+                                    </label> {{form_sua.so_dt_lh}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Ngày cập nhật (*)
+                                    </label> {{form_sua.ngay_cap_nhat}}
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Người cập nhật
+                                    </label> {{form_sua.nguoi_cap_nhat}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Họ tên người quản lý
+                                    </label> {{form_sua.ho_ten_nguoi_ql}}
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Đơn vị công tác
+                                    </label> {{form_sua.don_vi_cong_tac}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Lĩnh vực
+                                    </label> {{form_sua.linh_vuc}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Thông tin hộ gia đình</h4>
+                            <div class=" form-row ">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Họ và tên chủ hộ
+                                    </label> {{form_sua.ho_ten_chu_ho}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Số CMND
+                                    </label> {{form_sua.so_cmnd_chu_ho}}
+                                </div>
+                            </div>
+
+                            <div class=" form-row ">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Mã số định danh
+                                    </label> {{form_sua.ma_so_dinh_danh_chu_ho}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Quốc tịch
+                                    </label> {{form_sua.quoc_tich_chu_ho}}
+                                </div>
+                            </div>
+
+                            <div class=" form-row ">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Quan hệ với NKT
+                                    </label> {{form_sua.quan_he_voi_nkt}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Số điện thoại liên lạc
+                                    </label> {{form_sua.sdt_lien_lac_ho_gia_dinh}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Thông tin người thân đại diện</h4>
+                            <div class=" form-row ">
+                                <div class="col-sm-12">
+                                    <label for="">
+                                        Họ và tên cha, mẹ, vợ, chồng hoặc người đại diện hợp pháp
+                                    </label> {{form_sua.ho_ten_nguoi_dai_dien}}
+                                </div>
+                            </div>
+
+                            <div class=" form-row ">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Quan hệ với NKT
+                                    </label> {{form_sua.ndd_quan_he_voi_nkt}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Số điện thoại liên lạc
+                                    </label> {{form_sua.sdt_nguoi_dai_dien}}
+                                </div>
+                            </div>
+
+                            <div class=" form-row ">
+                                <div class="col-sm-4">
+                                    <label for="">
+                                        Số CMND
+                                    </label> {{form_sua.so_cmnd_nguoi_dai_dien}}
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="">
+                                        Mã số định danh
+                                    </label> {{form_sua.ma_so_dinh_danh_nguoi_dai_dien}}
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="">
+                                        Quốc tịch
+                                    </label> {{form_sua.quoc_tich_nguoi_dai_dien}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Thông tin người chăm sóc</h4>
+                            <div class=" form-row ">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Họ và tên người chăm sóc
+                                    </label> {{form_sua.ho_ten_nguoi_cham_soc}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Số CMND
+                                    </label> {{form_sua.so_cmnd_nguoi_cham_soc}}
+                                </div>
+                            </div>
+
+                            <div class=" form-row ">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Mã số định danh
+                                    </label> {{form_sua.ma_so_dinh_danh_nguoi_cham_soc}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Quốc tịch
+                                    </label> {{form_sua.quoc_tich_nguoi_cham_soc}}
+                                </div>
+                            </div>
+
+                            <div class=" form-row ">
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Quan hệ với NKT
+                                    </label> {{form_sua.ncs_quan_he_voi_nkt}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">
+                                        Số điện thoại người chăm sóc
+                                    </label> {{form_sua.so_dt_nguoi_cham_soc}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="overflow:auto; margin-right:40px; margin-top:40px;">
+                            <div style="float:right;">
+                                <button type="button" class="previous">Quay lại</button>
+                                <button type="button" class="next">Tiếp theo</button>
+                                <button type="button" class="submit">Cập nhật</button>
+
+
+                            </div>
+                        </div>
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:20px;margin-bottom:20px;">
+                            <span class="step step-form-1">1</span>
+                            <span class="step step-form-1">2</span>
+                            <span class="step step-form-1">3</span>
+                            <span class="step step-form-1">4</span>
+                            <span class="step step-form-1">5</span>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- CHECKBOX NGƯỜI KHUYẾT TẬT -->
+            <div id="menu1" class="container tab-pane fade"><br>
+                <div class="wrapper">
+                    <form id="myForm1" method="POST">
+                        {% csrf_token %}
+                        <!-- SECTION 1 -->
+                        <div class="tab">
+                            <h4>Vận động</h4>
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="bai nao">
+                                    <label for="defaultCheck">Bại não</label>
+                                    <br>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="liet tu chi">
+                                    <label for="defaultCheck">Liệt tứ chi</label>
+                                    <br>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="ban chan kheo">
+                                    <label for="defaultCheck">Bàn chân khèo</label>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="liet nua nguoi">
+                                    <label for="defaultCheck">Liệt nữa người</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="cut chi">
+                                    <label for="defaultCheck">Cụt chi</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="cot song">
+                                    <label for="defaultCheck">Gù vẹo cột sống</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <input type="checkbox" name="ton thuong tuy">
+                                    <label for="defaultCheck">Tổn thương tủy sống/ Liệt 2 chi dưới</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="checkbox" name="thoai hoa">
+                                    <label for="defaultCheck">Các biến dạng thoái hóa khớp</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <input type="checkbox" name="trat khop">
+                                    <label for="defaultCheck">Trật khớp háng bẩm sinh</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="checkbox" name="nhuoc co">
+                                    <label for="defaultCheck">Loạn dưỡng cơ/ Nhược cơ</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <label for="">Khó khăn vận động khác</label>
+                                    <input type="text" name="khac" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- SECTION 2 -->
+                        <div class="tab">
+                            <h4>Nhìn</h4>
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="mu mau">
+                                    <label for="defaultCheck">Mù màu</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="quang ga">
+                                    <label for="defaultCheck">Quáng gà</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="can thi">
+                                    <label for="defaultCheck">Cận thị mức độ nặng</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="mu 2 mat">
+                                    <label for="defaultCheck">Mù 2 mắt</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="mu 1 mat">
+                                    <label for="defaultCheck">Mù 1 mắt</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="mat thi truong">
+                                    <label for="defaultCheck">Mất thị trường</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="vien thi">
+                                    <label for="defaultCheck">Viễn thị mức độ nặng</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="lac mat">
+                                    <label for="defaultCheck">Lác mắt</label>
+                                </div>
+                            </div>
+
+                            <div class='form-row'>
+                                <div class="col-sm-12">
+                                    <label for="">Khác</label>
+                                    <input type="text" name="khac" class="form-control">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 3 -->
+                        <div class="tab">
+                            <h4>Nhận thức</h4>
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="noi">
+                                    <label for="defaultCheck">Khó khăn nói</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="nghe">
+                                    <label for="defaultCheck">Khó khăn nghe</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="cham">
+                                    <label for="defaultCheck">Châm phát triển trí tuệ</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="down">
+                                    <label for="defaultCheck">Hội chứng DOWN</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="tu ky">
+                                    <label for="defaultCheck">Tự kỷ</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="tam than">
+                                    <label for="defaultCheck">Bệnh tâm thần</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <label for="">Khác</label>
+                                    <input type="text" name="khac" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 4 -->
+                        <div class="tab">
+                            <h4>Khuyết tật khác</h4>
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="dong kinh">
+                                    <label for="defaultCheck">Động kinh</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="bong">
+                                    <label for="defaultCheck">Di chứng bỏng</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="tim">
+                                    <label for="defaultCheck">Tim bẩm sinh</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="ho hap">
+                                    <label for="defaultCheck">Bệnh hô hấp mãn tính</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="cam giac">
+                                    <label for="defaultCheck">Giảm cảm giác</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <label for="">Khác</label>
+                                    <input type="text" name="khac" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 5 -->
+                        <div class="tab">
+                            <h4>Nguyên nhân bị khuyết tật</h4>
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label for="">Thời điểm mắc KT (Ghi 4 số của năm)</label>
+                                    <input type="text" name="" class="form-control">
+                                    <br>
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <label for="">Tình trạng khuyết tật cụ thể</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label for="">Nguyên nhân khuyết tật</label>
+                                    <select name="" id="" class="form-control">
+                                        <option class="option" value="?" selected="selected"></option>
+                                        <option value="" class="option">Bẩm sinh</option>
+                                        <option value="" class="option">Mẹ ốm trong giai đoạn mang thai</option>
+                                        <option value="Khác" class="option">Khác</option>
+                                    </select>
+                                    <!-- <i class="zmdi zmdi-chevron-down zmdi-down"></i> -->
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">Nguyên nhân bẩm sinh khác</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <label for="">Nguyên nhân mắc phải khác</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-sm-6">
+                                    <div>
+                                        <label for="">Mức độ khuyết tật (*)</label>
+                                        <select name="" id="" class="form-control">
+                                            <option class="option" value="?" selected="selected"></option>
+                                            <option value="" class="option">Nhẹ</option>
+                                            <option value="" class="option">Nặng</option>
+                                            <option value="" class="option">Đặc biệt nặng</option>
+                                            <option value="Khác" class="option">Chưa xác định</option>
+                                        </select>
+                                        <!-- <i class="zmdi zmdi-chevron-down zmdi-down"></i> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                    <div>
+                                        <label for="">Lý do chưa xác định được mức độ khuyết tật</label>
+                                        <select name="" id="" class="form-control">
+                                            <option class="option" value="?" selected="selected"></option>
+                                            <option value="" class="option">Chưa làm hồ sơ</option>
+                                            <option value="" class="option">Đã làm hồ sơ nhưng chưa được xác định</option>
+                                            <option value="Khác" class="option">Không biết thông tin</option>
+                                        </select>
+                                        <!-- <i class="zmdi zmdi-chevron-down zmdi-down"></i> -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="">Khuyết tật khác</label>
+                                    <input type="text" name="khac" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="overflow:auto; margin-right:40px; margin-top:40px;">
+                            <div style="float:right;">
+                                <button type="button" class="previous">Quay lại</button>
+                                <button type="button" class="next">Tiếp theo</button>
+                                <button type="button" class="submit">Lưu TT</button>
+                            </div>
+                        </div>
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:20px;margin-bottom:20px;">
+                            <span class="step step-form-1">1</span>
+                            <span class="step step-form-1">2</span>
+                            <span class="step step-form-1">3</span>
+                            <span class="step step-form-1">4</span>
+                            <span class="step step-form-1">5</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CHECKBOX 2 NGƯỜI KHUYẾT TẬT-->
+            <div id="menu2" class="container tab-pane fade"><br>
+                <div class="wrapper">
+                    <form id="myForm2" method="POST">
+                        {% csrf_token %}
+                        <!-- SECTION 1 -->
+                        <div class="tab">
+                            <h4>Y tế</h4>
+                            <div class="form-row">
+                                <div class="col-sm-7">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Có nhu cầu khám xác định kiểm tra tuyến trên</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Có nhu cầu khám bệnh tuyến trên</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-7">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Cấp kinh phí khám, điều trị</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Cấp thẻ bào hiểm y tế</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-7">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tập phục hồi chức năng được BHYT chi trả</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tập phục hồi chức năng</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-7">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Dụng cụ phục hồi chức năng</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Phẩu thuật chỉnh hình</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tham gia chương trình phát hiện sớm, can thiệp sớm</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <label for="">Nhu cầu khác về y tế</label>
+                                    <input type="text" name="khac" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 2 -->
+                        <div class="tab">
+                            <h4>Đời sống, kinh tế, hòa nhập xã hội</h4>
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Trợ cấp thường xuyên</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Trợ cấp đột xuất</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Nhà ở</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Đào tạo nghề</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tự doanh</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Vay vốn</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tham gia tổ chức xã hội</label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Chăm sóc tại các Trung tâm Bảo Hiểm Xã Hội</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Sửa chữa nhà, sữa chữa tiếp cận gia đình</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Việc làm tại cơ sở kinh doanh, doanh nghiệp</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Cải thiện điều kiện vệ sinh, nước sạch, điện</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Phụ huynh NKT tham gia nhóm người chăm sóc</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tham gia các hoạt động thể thao vui chơi, giải trí</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Hỗ trợ miễn cước xe buýt và phương tiện vận chuyển công cộng</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <label for="defaultCheck">Nhu cầu khác về đời sống kinh tế, xã hội</label>
+                                    <input type="text" name="khac" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 3 -->
+                        <div class="tab">
+                            <h4>Giáo dục</h4>
+                            <div class=" form-row " style="margin-bottom:25px ;">
+                                <div class="col-sm-12">
+                                    <div class="form-holder form-1">
+                                        <input type="checkbox" name="">
+                                        <label for="defaultCheck">Được đi học</label>
+                                        <br>
+                                        <input type="checkbox" name="">
+                                        <label for="defaultCheck">Hỗ trợ học phí</label>
+                                        <br>
+                                        <input type="checkbox" name="">
+                                        <label for="defaultCheck">Học phụ đạo</label>
+                                        <br>
+                                        <input type="checkbox" name="down">
+                                        <label for="defaultCheck">Dụng cụ học tập, quần áo đồng phục</label>
+                                        <br>
+                                        <label for="">Nhu cầu khác về giáo dục</label>
+                                        <input type="text" name="khac" class="form-control">
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="overflow:auto; margin-right:40px; margin-top:40px;">
+                            <div style="float:right;">
+                                <button type="button" class="previous">Quay lại</button>
+                                <button type="button" class="next">Tiếp theo</button>
+                                <button type="button" class="submit">Lưu TT</button>
+                            </div>
+                        </div>
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:20px;margin-bottom:20px;">
+                            <span class="step step-form-1">1</span>
+                            <span class="step step-form-1">2</span>
+                            <span class="step step-form-1">3</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CHECKBOX 3 NGƯỜI KHUYẾT TẬT-->
+            <div id="menu3" class="container tab-pane fade"><br>
+                <div class="wrapper">
+                    <form id="myForm3" method="POST">
+                        {% csrf_token %}
+                        <!-- SECTION 1 -->
+                        <div class="tab">
+                            <h4>Y tế</h4>
+                            <div class="form-row">
+                                <div class="col-sm-7">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Có nhu cầu khám xác định kiểm tra tuyến trên</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Có nhu cầu khám bệnh tuyến trên</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-7">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Cấp kinh phí khám, điều trị</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Cấp thẻ bào hiểm y tế</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-7">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tập phục hồi chức năng được BHYT chi trả</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tập phục hồi chức năng</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-7">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Dụng cụ phục hồi chức năng</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Phẩu thuật chỉnh hình</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tham gia chương trình phát hiện sớm, can thiệp sớm</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <label for="">Nhu cầu khác về y tế</label>
+                                    <input type="text" name="khac" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 2 -->
+                        <div class="tab">
+                            <h4>Đời sống, kinh tế, hòa nhập xã hội</h4>
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Trợ cấp thường xuyên</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Trợ cấp đột xuất</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Nhà ở</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Đào tạo nghề</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tự doanh</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Vay vốn</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tham gia tổ chức xã hội</label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Chăm sóc tại các Trung tâm Bảo Hiểm Xã Hội</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Sửa chữa nhà, sữa chữa tiếp cận gia đình</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Việc làm tại cơ sở kinh doanh, doanh nghiệp</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Cải thiện điều kiện vệ sinh, nước sạch, điện</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Phụ huynh NKT tham gia nhóm người chăm sóc</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Tham gia các hoạt động thể thao vui chơi, giải trí</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <input type="checkbox" name="">
+                                    <label for="defaultCheck">Hỗ trợ miễn cước xe buýt và phương tiện vận chuyển công cộng</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-sm-12">
+                                    <label for="defaultCheck">Nhu cầu khác về đời sống kinh tế, xã hội</label>
+                                    <input type="text" name="khac" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 3 -->
+                        <div class="tab">
+                            <h4>Giáo dục</h4>
+                            <div class=" form-row " style="margin-bottom:25px ;">
+                                <div class="col-sm-12">
+                                    <div class="form-holder form-1">
+                                        <input type="checkbox" name="">
+                                        <label for="defaultCheck">Được đi học</label>
+                                        <br>
+                                        <input type="checkbox" name="">
+                                        <label for="defaultCheck">Hỗ trợ học phí</label>
+                                        <br>
+                                        <input type="checkbox" name="">
+                                        <label for="defaultCheck">Học phụ đạo</label>
+                                        <br>
+                                        <input type="checkbox" name="down">
+                                        <label for="defaultCheck">Dụng cụ học tập, quần áo đồng phục</label>
+                                        <br>
+                                        <label for="">Nhu cầu khác về giáo dục</label>
+                                        <input type="text" name="khac" class="form-control">
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 4 -->
+                        <div class="tab">
+                            <h4>Chi tiết</h4>
+                            <div class=" form-row " style="margin-bottom:25px ;">
+                                <div class="col-sm-12">
+                                    <div class="form-holder form-1">
+                                        <label for="defaultCheck">Ngày nhận hỗ trợ đã nhận</label>
+                                        <input type="text" name="khac" class="form-control">
+                                        <br>
+                                        <label for="defaultCheck">Ngày nhận hỗ trợ </label>
+                                        <input type="text" name="khac" class="form-control">
+                                        <br>
+                                        <label for="defaultCheck">Cụ thể về hỗ trợ</label>
+                                        <input type="text" name="khac" class="form-control">
+                                        <br>
+                                        <div>
+                                            <label for="">Nguồn hỗ trợ</label>
+                                            <select name="" id="" class="form-control">
+                                                                <option class="option" value="?" selected="selected"></option>
+                                                                <option value="" class="option">Nhà nước</option>
+                                                                <option value="" class="option">Tổ chức từ thiện</option>
+                                                                <option value="" class="option">Tổ chức phi chính phủ</option>
+                                                                <option value="" class="option">Tổ chức xã hội</option>
+                                                                <option value="" class="option">Doanh nghiệp</option>
+                                                                <option value="" class="option">Cá nhân</option>
+                                                                <option value="Khác" class="option">Khác</option>
+                                                            </select>
+                                            <!-- <i class="zmdi zmdi-chevron-down zmdi-down"></i> -->
+                                        </div>
+                                        <br>
+                                        <label for="">Cụ thể về nguồn hỗ trợ</label>
+                                        <input type="text" name="khac" class="form-control">
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="overflow:auto; margin-right:40px; margin-top:40px;">
+                            <div style="float:right;">
+                                <button type="button" class="previous">Quay lại</button>
+                                <button type="button" class="next">Tiếp theo</button>
+                                <button type="button" class="submit">Lưu TT</button>
+                            </div>
+                        </div>
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:20px;margin-bottom:20px;">
+                            <span class="step step-form-1">1</span>
+                            <span class="step step-form-1">2</span>
+                            <span class="step step-form-1">3</span>
+                            <span class="step step-form-1">4</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CHECKBOX 4 NGƯỜI KHUYẾT TẬT-->
+            <div id="menu4" class="container tab-pane fade"><br>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

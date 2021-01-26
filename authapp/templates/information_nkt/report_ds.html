@@ -1,0 +1,61 @@
+{% extends 'information_nkt/base_main.html' %} {% load static %} {% block content %}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Báo cáo danh sách Người Khuyết Tật</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table id="example" class="display nowrap table table-bordered" style="width:100%" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th style="width: 71px !important; background: rgb(47 164 231 / 20%);">Chọn</th>
+                        <th style="width: 165px !important; background:rgb(47 164 231 / 20%);">Họ tên</th>
+                        <th style="width: 300px !important; background: rgb(47 164 231 / 20%);">Địa chỉ</th>
+                        <th style="width: 100px !important; background: rgb(47 164 231 / 20%);">Ngày sinh</th>
+                        <th style="width: 155px !important; background: rgb(47 164 231 / 20%);">Số điện thoại</th>
+                        <th style="width: 100px !important; background: rgb(47 164 231 / 20%);">Giới tính</th>
+                        <th style="width: 100px !important; background: rgb(47 164 231 / 20%);">Ngày lập</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for x in report %}
+                    <tr>
+                        <td>
+                            <form>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                </div>
+                            </form>
+                        </td>
+
+                        <td>{{ x.ho_ten_khai_sinh_nkt }}</td>
+                        <td>{{ x.noi_dk_khai_sinh }}</td>
+                        <td>{{ x.ngay_sinh_nkt|date:"d/m/Y" }}</td>
+                        <td>{{ x.so_dt_lh }}</td>
+                        <td>{{ x.gioi_tinh }}</td>
+                        <td>{{ x.ngay_cap_nhat|date:"d/m/Y" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+                <!-- <tfoot>
+                    <tr>
+                        <th>Chọn</th>
+                        <th>Họ tên</th>
+                        <th>Địa chỉ</th>
+                        <th>Số đện thoại</th>
+                        <th>Tuổi</th>
+                        <th>Ngày lập</th>
+                        <th>Giới tính</th>
+                    </tr>
+                </tfoot> -->
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

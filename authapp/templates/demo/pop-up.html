@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+    <!-- DATE-PICKER -->
+    <link rel="stylesheet" href="colorlib-wizard-9/vendor/date-picker/css/datepicker.min.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="colorlib-wizard-9/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Extra Large Modal</h2>
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            <i class="fas fa-pencil-alt"></i>
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="col-sm-12">
+                                <div class="well container ct-popup" style="text-transform: uppercase; ">
+                                    NHẬP THÔNG TIN NGƯỜI KHUYẾT TẬT
+                                </div>
+                                <div class="container mt-3 ct-popup">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs ">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#home">THÔNG TIN
+                                                CHUNG</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#menu1">KHUYẾT TẬT</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#menu2">NHU CẦU</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#menu3">HỖ TRỢ ĐÃ NHẬN</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#menu4">HƯỚNG NGHIỆP CHO NKT</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div id="home" class="tab-pane active"><br>
+                                            <div class="wrapper">
+                                                <form action="" id="wizard">
+
+                                                    <!-- SECTION 1 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3>Thông tin NKT</h3>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Số TT NKT
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Số hiệu giấy xác nhận NKT
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Số định danh
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Họ, chữ đệm và tên khai sinh NKT (*)
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Nơi đăng ký khai sinh
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Ngày sinh
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Giới tính
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option value="Nam" class="option">Nam</option>
+                                                                        <option value="Nữ" class="option">Nữ</option>
+                                                                        <option value="Khác" class="option">Khác
+                                                                        </option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Số CMND
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Quê quán
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Địa chỉ thường trú
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Quốc tịch
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Dân tộc
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" label="Tày" value="2">
+                                                                            Tày</option>
+                                                                        <option class="option" label="Thái" value="150">
+                                                                            Thái</option>
+                                                                        <option class="option" label="Kinh" value="1">
+                                                                            Kinh</option>
+                                                                        <option class="option" label="Hoa" value="151">
+                                                                            Hoa</option>
+                                                                        <option class="option" label="Khơ-me"
+                                                                            value="152">Khơ-me</option>
+                                                                        <option class="option" label="Mường"
+                                                                            value="153">Mường</option>
+                                                                        <option class="option" label="Nùng" value="154">
+                                                                            Nùng</option>
+                                                                        <option class="option" label="HMông"
+                                                                            value="155">HMông</option>
+                                                                        <option class="option" label="Dao" value="156">
+                                                                            Dao</option>
+                                                                        <option class="option" label="Gia-rai"
+                                                                            value="157">Gia-rai</option>
+                                                                        <option class="option" label="Ngái" value="158">
+                                                                            Ngái</option>
+                                                                        <option class="option" label="Ê-đê" value="159">
+                                                                            Ê-đê</option>
+                                                                        <option class="option" label="Ba na"
+                                                                            value="160">Ba na</option>
+                                                                        <option class="option" label="Xơ-Đăng"
+                                                                            value="161">Xơ-Đăng</option>
+                                                                        <option class="option" label="Sán Chay"
+                                                                            value="162">Sán Chay</option>
+                                                                        <option class="option" label="Cơ-ho"
+                                                                            value="163">Cơ-ho</option>
+                                                                        <option class="option" label="Chăm" value="164">
+                                                                            Chăm</option>
+                                                                        <option class="option" label="Sán Dìu"
+                                                                            value="165">Sán Dìu</option>
+                                                                        <option class="option" label="Hrê" value="166">
+                                                                            Hrê</option>
+                                                                        <option class="option" label="Mnông"
+                                                                            value="167">Mnông</option>
+                                                                        <option class="option" label="Ra-glai"
+                                                                            value="168">Ra-glai</option>
+                                                                        <option class="option" label="Xtiêng"
+                                                                            value="169">Xtiêng</option>
+                                                                        <option class="option" label="Bru- Vân Kiều"
+                                                                            value="3">Bru- Vân Kiều</option>
+                                                                        <option class="option" label="Thổ" value="171">
+                                                                            Thổ</option>
+                                                                        <option class="option" label="Giáy" value="172">
+                                                                            Giáy</option>
+                                                                        <option class="option" label="Cơ-tu"
+                                                                            value="173">Cơ-tu</option>
+                                                                        <option class="option" label="Gié Triêng"
+                                                                            value="174">Gié Triêng</option>
+                                                                        <option class="option" label="Mạ" value="175">Mạ
+                                                                        </option>
+                                                                        <option class="option" label="Khơ-mú"
+                                                                            value="176">Khơ-mú</option>
+                                                                        <option class="option" label="Co" value="177">Co
+                                                                        </option>
+                                                                        <option class="option" label="Tà-ôi"
+                                                                            value="178">Tà-ôi</option>
+                                                                        <option class="option" label="Chơ-ro"
+                                                                            value="179">Chơ-ro</option>
+                                                                        <option class="option" label="Kháng"
+                                                                            value="180">Kháng</option>
+                                                                        <option class="option" label="Xinh-mun"
+                                                                            value="181">Xinh-mun</option>
+                                                                        <option class="option" label="Hà Nhì"
+                                                                            value="182">Hà Nhì</option>
+                                                                        <option class="option" label="Chu ru"
+                                                                            value="183">Chu ru</option>
+                                                                        <option class="option" label="Lào" value="184">
+                                                                            Lào</option>
+                                                                        <option class="option" label="La Chí"
+                                                                            value="185">La Chí</option>
+                                                                        <option class="option" label="La Ha"
+                                                                            value="186">La Ha</option>
+                                                                        <option class="option" label="Phù Lá"
+                                                                            value="187">Phù Lá</option>
+                                                                        <option class="option" label="La Hủ"
+                                                                            value="188">La Hủ</option>
+                                                                        <option class="option" label="Lự" value="189">Lự
+                                                                        </option>
+                                                                        <option class="option" label="Lô Lô"
+                                                                            value="190">Lô Lô</option>
+                                                                        <option class="option" label="Chứt" value="191">
+                                                                            Chứt</option>
+                                                                        <option class="option" label="Mảng" value="192">
+                                                                            Mảng</option>
+                                                                        <option class="option" label="Pà Thẻn"
+                                                                            value="193">Pà Thẻn</option>
+                                                                        <option class="option" label="Co Lao"
+                                                                            value="194">Co Lao</option>
+                                                                        <option class="option" label="Cống" value="195">
+                                                                            Cống</option>
+                                                                        <option class="option" label="Bố Y" value="196">
+                                                                            Bố Y</option>
+                                                                        <option class="option" label="Si La"
+                                                                            value="197">Si La</option>
+                                                                        <option class="option" label="Pu Péo"
+                                                                            value="198">Pu Péo</option>
+                                                                        <option class="option" label="Brâu" value="199">
+                                                                            Brâu</option>
+                                                                        <option class="option" label="Ơ Đu" value="200">
+                                                                            Ơ Đu</option>
+                                                                        <option class="option" label="Rơ măm"
+                                                                            value="201">Rơ măm</option>
+                                                                        <option class="option" label="Người nước ngoài"
+                                                                            value="202">Người nước ngoài</option>
+                                                                        <option class="option" label="Không rõ"
+                                                                            value="203">Không rõ</option>
+                                                                        <option class="option" label="Khác"
+                                                                            value="170">Khác</option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Tôn giáo
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" label="Thiên Chúa"
+                                                                            value="241">Thiên Chúa</option>
+                                                                        <option class="option" label="Phật Giáo"
+                                                                            value="242">Phật Giáo</option>
+                                                                        <option class="option" label="Không Tôn Giáo"
+                                                                            value="243">Không Tôn Giáo</option>
+                                                                        <option class="option" label="Khác"
+                                                                            value="303">Khác</option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Nhóm máu
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" label="Nhóm máu O"
+                                                                            value="241">Nhóm máu O</option>
+                                                                        <option class="option" label="Nhóm máu A"
+                                                                            value="242">Nhóm máu A</option>
+                                                                        <option class="option" label="Nhóm máu B"
+                                                                            value="243">Nhóm máu B</option>
+                                                                        <option class="option" label="Nhóm máu AB"
+                                                                            value="243">Nhóm máu AB </option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Trình độ học vấn
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option"
+                                                                            label="Không đi học/ mù chữ" value="4">Không
+                                                                            đi học/ mù chữ</option>
+                                                                        <option class="option"
+                                                                            label="Biết đọc, biết viết" value="5">Biết
+                                                                            đọc, biết viết</option>
+                                                                        <option class="option" label="Tiểu học"
+                                                                            value="17">Tiểu học</option>
+                                                                        <option class="option" label="THCS" value="18">
+                                                                            THCS</option>
+                                                                        <option class="option" label="THPT" value="19">
+                                                                            THPT</option>
+                                                                        <option class="option"
+                                                                            label="Sơ cấp/trung học" value="281">Sơ
+                                                                            cấp/trung học</option>
+                                                                        <option class="option"
+                                                                            label="Cao đẳng/Đại học" value="282">Cao
+                                                                            đẳng/Đại học</option>
+                                                                        <option class="option" label="Trên đại học"
+                                                                            value="283">Trên đại học</option>
+                                                                        <option class="option" label="Khác"
+                                                                            value="284">Khác</option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Trình độ chuyên môn
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" label="Chưa qua đào tạo"
+                                                                            value="6">Chưa qua đào tạo</option>
+                                                                        <option class="option" label="Sơ cấp/ trung học"
+                                                                            value="7">Sơ cấp/ trung học</option>
+                                                                        <option class="option" label="Cao đẳng/ đại học"
+                                                                            value="20">Cao đẳng/ đại học</option>
+                                                                        <option class="option" label="Trên đại học"
+                                                                            value="21">Trên đại học</option>
+                                                                        <option class="option" label="Khác"
+                                                                            value="301">Khác</option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Nghề nghiệp hiện nay
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" label="Còn nhỏ"
+                                                                            value="10">Còn nhỏ</option>
+                                                                        <option class="option" label="Nội trợ"
+                                                                            value="11">Nội trợ</option>
+                                                                        <option class="option" label="Nông nghiệp"
+                                                                            value="27">Nông nghiệp</option>
+                                                                        <option class="option"
+                                                                            label="Công chức, viên chức" value="28">Công
+                                                                            chức, viên chức</option>
+                                                                        <option class="option" label="Công nhân"
+                                                                            value="29">Công nhân</option>
+                                                                        <option class="option" label="Thợ thủ công"
+                                                                            value="30">Thợ thủ công</option>
+                                                                        <option class="option" label="Dịch vụ/ buôn bán"
+                                                                            value="31">Dịch vụ/ buôn bán</option>
+                                                                        <option class="option" label="Thất nghiệp"
+                                                                            value="32">Thất nghiệp</option>
+                                                                        <option class="option"
+                                                                            label="Bệnh tật không làm việc được"
+                                                                            value="33">Bệnh tật không làm việc được
+                                                                        </option>
+                                                                        <option class="option" label="Khác"
+                                                                            value="262">Khác</option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Là nạn nhân chất độc da cam
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option value="Co" class="option">Có</option>
+                                                                        <option value="Không" class="option">Không
+                                                                        </option>
+                                                                        <option value="Khác" class="option">Khác
+                                                                        </option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Tình trạng hôn nhân
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" label="Chưa kết hôn"
+                                                                            value="12">Chưa kết hôn</option>
+                                                                        <option class="option" label="Đã kết hôn"
+                                                                            value="13">Đã kết hôn</option>
+                                                                        <option class="option" label="Ly hôn"
+                                                                            value="34">Ly hôn</option>
+                                                                        <option class="option" label="Góa" value="35">
+                                                                            Góa</option>
+                                                                        <option class="option" label="Khác"
+                                                                            value="261">Khác</option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Tổng số con
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Số con dưới 16 tuổi
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </section>
+
+                                                    <!-- SECTION 2 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3>Thông tin liên lạc NKT</h3>
+                                                        <div class=" form-row " style="margin-bottom:25px ;">
+                                                            <div class="col-sm-12">
+                                                                <label for="">
+                                                                    Địa chỉ liên lạc NKT
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control" placeholder="Số nhà, đường (hoặc tổ/ấp)">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row ">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Số điện thoại liên hệ NKT
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Ngày cập nhật (*)
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Người cập nhật
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Họ tên người quản lý
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Đơn vị công tác
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Lĩnh vực
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- SECTION 3 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3 style="margin-bottom: 37px;">Thông tin hộ gia đình</h3>
+                                                        <div class=" form-row ">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Họ và tên chủ hộ
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Số CMND
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class=" form-row ">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Mã số định danh
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Quốc tịch
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class=" form-row ">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Quan hệ với NKT
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" label="" value="12">Bố
+                                                                        </option>
+                                                                        <option class="option" label="" value="13">Mẹ
+                                                                        </option>
+                                                                        <option class="option" label="" value="34">Ông
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Bà
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Cô
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Gì
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Chú
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Bác
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Anh
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Chị
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Em
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Chồng
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Vợ
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Con
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Cháu
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Người
+                                                                            khuyết tật</option>
+                                                                        <option class="option" label="Khác"
+                                                                            value="261">Khác</option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Số điện thoại liên lạc
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- SECTION 4 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3 style="margin-bottom: 37px;">Thông tin người thân đại diện
+                                                        </h3>
+                                                        <div class=" form-row ">
+                                                            <div class="col-sm-12">
+                                                                <label for="">
+                                                                    Họ và tên cha, mẹ, vợ, chồng hoặc người đại diện hợp
+                                                                    pháp
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class=" form-row ">
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Số CMND
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Mã số định danh
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label for="">
+                                                                    Quốc tịch
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class=" form-row ">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Quan hệ với NKT
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" label="" value="12">Bố
+                                                                        </option>
+                                                                        <option class="option" label="" value="13">Mẹ
+                                                                        </option>
+                                                                        <option class="option" label="" value="34">Ông
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Bà
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Cô
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Gì
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Chú
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Bác
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Anh
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Chị
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Em
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Chồng
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Vợ
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Con
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Cháu
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Người
+                                                                            khuyết tật</option>
+                                                                        <option class="option" label="Khác"
+                                                                            value="261">Khác</option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Số điện thoại liên lạc
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- SECTION 5 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3 style="margin-bottom: 37px;">Thông tin người chăm sóc</h3>
+                                                        <div class=" form-row ">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Họ và tên người chăm sóc
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Số CMND
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class=" form-row ">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Mã số định danh
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Quốc tịch
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class=" form-row ">
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Quan hệ với NKT
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option class="option" label="" value="12">Bố
+                                                                        </option>
+                                                                        <option class="option" label="" value="13">Mẹ
+                                                                        </option>
+                                                                        <option class="option" label="" value="34">Ông
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Bà
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Cô
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Gì
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Chú
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Bác
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Anh
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Chị
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Em
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Chồng
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Vợ
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Con
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Cháu
+                                                                        </option>
+                                                                        <option class="option" label="" value="35">Người
+                                                                            khuyết tật</option>
+                                                                        <option class="option" label="Khác"
+                                                                            value="261">Khác</option>
+                                                                    </select>
+                                                                    <i class="zmdi zmdi-chevron-down"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">
+                                                                    Số điện thoại người chăm sóc
+                                                                </label>
+                                                                <div class="form-holder">
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div id="menu1" class="container tab-pane fade ct-popup"><br>
+                                            <div class="wrapper">
+                                                <form action="" id="wizard-1">
+
+                                                    <!-- SECTION 1 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3>Vận động</h3>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="bai nao">
+                                                                <label for="defaultCheck">Bại não</label>
+                                                                <br>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="liet tu chi">
+                                                                <label for="defaultCheck">Liệt tứ chi</label>
+                                                                <br>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="ban chan kheo">
+                                                                <label for="defaultCheck">Bàn chân khèo</label>
+                                                                <br>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="liet nua nguoi">
+                                                                <label for="defaultCheck">Liệt nữa người</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="cut chi">
+                                                                <label for="defaultCheck">Cụt chi</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="cot song">
+                                                                <label for="defaultCheck">Gù vẹo cột sống</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <input type="checkbox" id="defaultCheck" name="ton thuong tuy">
+                                                                <label for="defaultCheck">Tổn thương tủy sống/ Liệt 2
+                                                                    chi dưới</label>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <input type="checkbox" id="defaultCheck" name="thoai hoa">
+                                                                <label for="defaultCheck">Các biến dạng thoái hóa
+                                                                    khớp</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <input type="checkbox" id="defaultCheck" name="trat khop">
+                                                                <label for="defaultCheck">Trật khớp háng bẩm
+                                                                    sinh</label>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <input type="checkbox" id="defaultCheck" name="nhuoc co">
+                                                                <label for="defaultCheck">Loạn dưỡng cơ/ Nhược
+                                                                    cơ</label>
+                                                            </div>
+                                                        </div>
+                                                        <label for="">Khó khăn vận động khác</label>
+                                                        <input type="text" name="khac" class="form-control">
+                                                    </section>
+
+                                                    <!-- SECTION 2 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3>Nhìn</h3>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="mu mau">
+                                                                <label for="defaultCheck">Mù màu</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="quang ga">
+                                                                <label for="defaultCheck">Quáng gà</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="can thi">
+                                                                <label for="defaultCheck">Cận thị mức độ nặng</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="mu 2 mat">
+                                                                <label for="defaultCheck">Mù 2 mắt</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="mu 1 mat">
+                                                                <label for="defaultCheck">Mù 1 mắt</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="mat thi truong">
+                                                                <label for="defaultCheck">Mất thị trường</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="vien thi">
+                                                                <label for="defaultCheck">Viễn thị mức độ nặng</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="lac mat">
+                                                                <label for="defaultCheck">Lác mắt</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <label for="">Khác</label>
+                                                        <input type="text" name="khac" class="form-control">
+
+                                                    </section>
+
+                                                    <!-- SECTION 3 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3 style="margin-bottom: 37px;">Nhận thức</h3>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="noi">
+                                                                <label for="defaultCheck">Khó khăn nói</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="nghe">
+                                                                <label for="defaultCheck">Khó khăn nghe</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="cham">
+                                                                <label for="defaultCheck">Châm phát triển trí
+                                                                    tuệ</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="down">
+                                                                <label for="defaultCheck">Hội chứng DOWN</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="tu ky">
+                                                                <label for="defaultCheck">Tự kỷ</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="tam than">
+                                                                <label for="defaultCheck">Bệnh tâm thần</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <label for="">Khác</label>
+                                                        <input type="text" name="khac" class="form-control">
+                                                    </section>
+
+                                                    <!-- SECTION 4-->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3 style="margin-bottom: 37px;">Khuyết tật khác</h3>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="dong kinh">
+                                                                <label for="defaultCheck">Động kinh</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="bong">
+                                                                <label for="defaultCheck">Di chứng bỏng</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="tim">
+                                                                <label for="defaultCheck">Tim bẩm sinh</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="ho hap">
+                                                                <label for="defaultCheck">Bệnh hô hấp mãn tính</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="cam giac">
+                                                                <label for="defaultCheck">Giảm cảm giác</label>
+                                                            </div>
+                                                        </div>
+                                                        <label for="">Khác</label>
+                                                        <input type="text" name="khac" class="form-control">
+
+
+                                                    </section>
+
+                                                    <!-- SECTION 5-->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3 style="margin-bottom: 37px;">Nguyên nhân bị khuyết tật</h3>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <label for="">Thời điểm mắc KT (Ghi 4 số của
+                                                                    năm)</label>
+                                                                <input type="text" name="" class="form-control">
+                                                                <br>
+                                                            </div>
+                                                            <div class="col-sm-6">
+
+                                                                <label for="">Tình trạng khuyết tật cụ thể</label>
+                                                                <input type="text" name="" class="form-control">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <label for="">Nguyên nhân khuyết tật</label>
+                                                                <select name="" id="" class="form-control">
+                                                                    <option class="option" value="?"
+                                                                        selected="selected"></option>
+                                                                    <option value="" class="option">Bẩm sinh</option>
+                                                                    <option value="" class="option">Mẹ ốm trong giai
+                                                                        đoạn mang thai</option>
+                                                                    <option value="Khác" class="option">Khác</option>
+                                                                </select>
+                                                                <!-- <i class="zmdi zmdi-chevron-down zmdi-down"></i> -->
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">Nguyên nhân bẩm sinh khác</label>
+                                                                <input type="text" name="" class="form-control">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <label for="">Nguyên nhân mắc phải khác</label>
+                                                                <input type="text" name="" class="form-control">
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div>
+                                                                    <label for="">Mức độ khuyết tật (*)</label>
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option value="" class="option">Nhẹ</option>
+                                                                        <option value="" class="option">Nặng</option>
+                                                                        <option value="" class="option">Đặc biệt nặng
+                                                                        </option>
+                                                                        <option value="Khác" class="option">Chưa xác
+                                                                            định</option>
+                                                                    </select>
+                                                                    <!-- <i class="zmdi zmdi-chevron-down zmdi-down"></i> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6">
+                                                                <div>
+                                                                    <label for="">Lý do chưa xác định được mức độ khuyết
+                                                                        tật</label>
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option class="option" value="?"
+                                                                            selected="selected"></option>
+                                                                        <option value="" class="option">Chưa làm hồ sơ
+                                                                        </option>
+                                                                        <option value="" class="option">Đã làm hồ sơ
+                                                                            nhưng chưa được xác định</option>
+                                                                        <option value="Khác" class="option">Không biết
+                                                                            thông tin</option>
+                                                                    </select>
+                                                                    <!-- <i class="zmdi zmdi-chevron-down zmdi-down"></i> -->
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="">Khuyết tật khác</label>
+                                                                <input type="text" name="khac" class="form-control">
+                                                            </div>
+                                                        </div>
+
+                                                    </section>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div id="menu2" class="container tab-pane fade ct-popup"><br>
+                                            <div class="wrapper">
+                                                <form action="" id="wizard-2">
+
+                                                    <!-- SECTION 1 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3>Y tế</h3>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-7">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Có nhu cầu khám xác định kiểm
+                                                                    tra tuyến trên</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Có nhu cầu khám bệnh tuyến
+                                                                    trên</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-7">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Cấp kinh phí khám, điều
+                                                                    trị</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Cấp thẻ bào hiểm y tế</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-7">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tập phục hồi chức năng được
+                                                                    BHYT chi trả</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tập phục hồi chức năng</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-7">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Dụng cụ phục hồi chức
+                                                                    năng</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Phẩu thuật chỉnh hình</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tham gia chương trình phát
+                                                                    hiện sớm, can thiệp sớm</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <label for="">Nhu cầu khác về y tế</label>
+                                                        <input type="text" name="khac" class="form-control">
+
+
+                                                    </section>
+
+                                                    <!-- SECTION 2 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3>Đời sống, kinh tế, hòa nhập xã hội</h3>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Trợ cấp thường xuyên</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Trợ cấp đột xuất</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Nhà ở</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Đào tạo nghề</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tự doanh</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Vay vốn</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tham gia tổ chức xã
+                                                                    hội</label>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Chăm sóc tại các Trung tâm Bảo
+                                                                    Hiểm Xã Hội</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Sửa chữa nhà, sữa chữa tiếp
+                                                                    cận gia đình</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Việc làm tại cơ sở kinh doanh,
+                                                                    doanh nghiệp</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Cải thiện điều kiện vệ sinh,
+                                                                    nước sạch, điện</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Phụ huynh NKT tham gia nhóm
+                                                                    người chăm sóc</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tham gia các hoạt động thể
+                                                                    thao vui chơi, giải trí</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Hỗ trợ miễn cước xe buýt và
+                                                                    phương tiện vận chuyển công cộng</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <label for="defaultCheck">Nhu cầu khác về đời sống kinh tế, xã
+                                                            hội</label>
+                                                        <input type="text" name="khac" class="form-control">
+
+                                                    </section>
+
+                                                    <!-- SECTION 3 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3 style="margin-bottom: 37px;">Giáo dục</h3>
+                                                        <div class=" form-row " style="margin-bottom:25px ;">
+                                                            <div class="col-sm-12">
+                                                                <div class="form-holder form-1">
+                                                                    <input type="checkbox" id="defaultCheck" name="">
+                                                                    <label for="defaultCheck">Được đi học</label>
+                                                                    <br>
+                                                                    <input type="checkbox" id="defaultCheck" name="">
+                                                                    <label for="defaultCheck">Hỗ trợ học phí</label>
+                                                                    <br>
+                                                                    <input type="checkbox" id="defaultCheck" name="">
+                                                                    <label for="defaultCheck">Học phụ đạo</label>
+                                                                    <br>
+                                                                    <input type="checkbox" id="defaultCheck" name="down">
+                                                                    <label for="defaultCheck">Dụng cụ học tập, quần áo
+                                                                        đồng phục</label>
+                                                                    <br>
+                                                                    <label for="">Nhu cầu khác về giáo dục</label>
+                                                                    <input type="text" name="khac" class="form-control">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div id="menu3" class="container tab-pane fade ct-popup"><br>
+                                            <div class="wrapper">
+                                                <form action="" id="wizard-3">
+
+                                                    <!-- SECTION 1 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3>Y tế</h3>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-7">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Có nhu cầu khám xác định kiểm
+                                                                    tra tuyến trên</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Có nhu cầu khám bệnh tuyến
+                                                                    trên</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-7">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Cấp kinh phí khám, điều
+                                                                    trị</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Cấp thẻ bào hiểm y tế</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-7">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tập phục hồi chức năng được
+                                                                    BHYT chi trả</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tập phục hồi chức năng</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-7">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Dụng cụ phục hồi chức
+                                                                    năng</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Phẩu thuật chỉnh hình</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tham gia chương trình phát
+                                                                    hiện sớm, can thiệp sớm</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <label for="">Nhu cầu khác về y tế</label>
+                                                        <input type="text" name="khac" class="form-control">
+
+
+                                                    </section>
+
+                                                    <!-- SECTION 2 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3>Đời sống, kinh tế, hòa nhập xã hội</h3>
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Trợ cấp thường xuyên</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Trợ cấp đột xuất</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Nhà ở</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Đào tạo nghề</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tự doanh</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Vay vốn</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tham gia tổ chức xã
+                                                                    hội</label>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Chăm sóc tại các Trung tâm Bảo
+                                                                    Hiểm Xã Hội</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Sửa chữa nhà, sữa chữa tiếp
+                                                                    cận gia đình</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Việc làm tại cơ sở kinh doanh,
+                                                                    doanh nghiệp</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Cải thiện điều kiện vệ sinh,
+                                                                    nước sạch, điện</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Phụ huynh NKT tham gia nhóm
+                                                                    người chăm sóc</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Tham gia các hoạt động thể
+                                                                    thao vui chơi, giải trí</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12">
+                                                                <input type="checkbox" id="defaultCheck" name="">
+                                                                <label for="defaultCheck">Hỗ trợ miễn cước xe buýt và
+                                                                    phương tiện vận chuyển công cộng</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <label for="defaultCheck">Nhu cầu khác về đời sống kinh tế, xã
+                                                            hội</label>
+                                                        <input type="text" name="khac" class="form-control">
+
+                                                    </section>
+
+                                                    <!-- SECTION 3 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3 style="margin-bottom: 37px;">Giáo dục</h3>
+                                                        <div class=" form-row " style="margin-bottom:25px ;">
+                                                            <div class="col-sm-12">
+                                                                <div class="form-holder form-1">
+                                                                    <input type="checkbox" id="defaultCheck" name="">
+                                                                    <label for="defaultCheck">Được đi học</label>
+                                                                    <br>
+                                                                    <input type="checkbox" id="defaultCheck" name="">
+                                                                    <label for="defaultCheck">Hỗ trợ học phí</label>
+                                                                    <br>
+                                                                    <input type="checkbox" id="defaultCheck" name="">
+                                                                    <label for="defaultCheck">Học phụ đạo</label>
+                                                                    <br>
+                                                                    <input type="checkbox" id="defaultCheck" name="down">
+                                                                    <label for="defaultCheck">Dụng cụ học tập, quần áo
+                                                                        đồng phục</label>
+                                                                    <br>
+                                                                    <label for="">Nhu cầu khác về giáo dục</label>
+                                                                    <input type="text" name="khac" class="form-control">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- SECTION 4 -->
+                                                    <h4></h4>
+                                                    <section>
+                                                        <h3 style="margin-bottom: 37px;">Chi tiết</h3>
+                                                        <div class=" form-row " style="margin-bottom:25px ;">
+                                                            <div class="col-sm-12">
+                                                                <div class="form-holder form-1">
+                                                                    <label for="defaultCheck">Ngày nhận hỗ trợ đã
+                                                                        nhận</label>
+                                                                    <input type="text" name="khac" class="form-control">
+                                                                    <br>
+                                                                    <label for="defaultCheck">Ngày nhận hỗ trợ </label>
+                                                                    <input type="text" name="khac" class="form-control">
+                                                                    <br>
+                                                                    <label for="defaultCheck">Cụ thể về hỗ trợ</label>
+                                                                    <input type="text" name="khac" class="form-control">
+                                                                    <br>
+                                                                    <div>
+                                                                        <label for="">Nguồn hỗ trợ</label>
+                                                                        <select name="" id="" class="form-control">
+                                                                            <option class="option" value="?"
+                                                                                selected="selected"></option>
+                                                                            <option value="" class="option">Nhà nước
+                                                                            </option>
+                                                                            <option value="" class="option">Tổ chức từ
+                                                                                thiện</option>
+                                                                            <option value="" class="option">Tổ chức phi
+                                                                                chính phủ</option>
+                                                                            <option value="" class="option">Tổ chức xã
+                                                                                hội</option>
+                                                                            <option value="" class="option">Doanh nghiệp
+                                                                            </option>
+                                                                            <option value="" class="option">Cá nhân
+                                                                            </option>
+                                                                            <option value="Khác" class="option">Khác
+                                                                            </option>
+                                                                        </select>
+                                                                        <!-- <i class="zmdi zmdi-chevron-down zmdi-down"></i> -->
+                                                                    </div>
+                                                                    <br>
+                                                                    <label for="">Cụ thể về nguồn hỗ trợ</label>
+                                                                    <input type="text" name="khac" class="form-control">
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div id="menu4" class="container tab-pane fade ct-popup"><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- JQUERY STEP -->
+    <script src="colorlib-wizard-9/js/jquery.steps.js"></script>
+
+    <!-- DATE-PICKER -->
+    <script src="colorlib-wizard-9/vendor/date-picker/js/datepicker.js"></script>
+    <script src="colorlib-wizard-9/vendor/date-picker/js/datepicker.en.js"></script>
+
+    <script src="colorlib-wizard-9/js/main.js"></script>
+    <script src="colorlib-wizard-9/js/main-1.js"></script>
+    <script src="colorlib-wizard-9/js/main-2.js"></script>
+    <script src="colorlib-wizard-9/js/main-3.js"></script>
+
+
+</body>
+
+</html>

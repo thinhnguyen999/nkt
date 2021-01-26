@@ -1,0 +1,427 @@
+{% extends 'information_nkt/base_main.html' %} {% block content %}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <!-- <h1 class="h3 mb-2 text-gray-800">Danh sách Người khuyết tật</h1> -->
+    <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p> -->
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Danh sách Người Khuyết Tật</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr style="text-align:center;">
+
+                            <th style="width:175px!important; background: rgb(47 164 231 / 20%)!important;">Họ tên</th>
+                            <th style="width:300px!important; background: rgb(47 164 231 / 20%)!important;">Địa chỉ</th>
+                            <th style="width:115px!important; background: rgb(47 164 231 / 20%)!important;">Ngày sinh</th>
+                            <th style="width:100px!important; background: rgb(47 164 231 / 20%)!important;">Giới tính</th>
+                            <th style="width:155px!important; background: rgb(47 164 231 / 20%)!important;">Số điện thoại</th>
+                            <th style="width:68px!important; background: rgb(47 164 231 / 20%)!important;">Xem</th>
+                            <th style="width:68px!important; background: rgb(47 164 231 / 20%)!important;">Sửa</th>
+                            <th style="width:68px!important; background: rgb(47 164 231 / 20%)!important;">Xóa</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for x in info %}
+                        <tr id="row-{{ x.id }}">
+                            <td>{{ x.ho_ten_khai_sinh_nkt }}</td>
+                            <td>{{ x.noi_dk_khai_sinh }}</td>
+                            <td>{{ x.ngay_sinh_nkt|date:"d/m/Y"}}</td>
+                            <td>{{ x.gioi_tinh}}</td>
+                            <td>{{ x.so_dt_lh}}</td>
+                            <td>
+                                <div class="container">
+                                    <!-- Button to Open the Modal -->
+                                    <!-----------------------------------------------------------------DJANGO XEM THÔNG TIN CHI TIẾT------------------------->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-{{ x.id }}">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <!-- The Modal -->
+                                    <div class="modal fade" id="myModal-{{ x.id }}">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Xem thông tin</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                    <div class="container-fluid">
+                                                        <div id="accordion">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                                                        Thông tin người khuyết tật <span style="color: #2fa4e7; font-weight: bold;">{{x.ho_ten_khai_sinh_nkt}}.</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                                                    <div class="card-body">
+                                                                        <div class="card-body">
+                                                                            <div>
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Họ tên NKT:</label> {{ x.ho_ten_khai_sinh_nkt}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Nơi đăng kí khai sinh:</label> {{ x.noi_dk_khai_sinh}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Quê quán:</label> {{ x.que_quan}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Địa chỉ thường trú:</label> {{ x.dia_chi_thuong_tru}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Số thứ tự NKT:</label> {{ x.so_tt_nkt}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Ngày sinh:</label> {{ x.ngay_sinh_nkt|date:"d/m/Y"}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Số định danh NKT:</label> {{ x.so_dinh_danh}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Số hiệu giấy xác nhận NKT:</label> {{ x.so_hieu_giay_xac_nhan}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Giới tính:</label> {{ x.gioi_tinh}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Số CMND:</label> {{ x.so_cmnd}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Quốc tịch:</label> {{ x.quoc_tich}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Dân tộc:</label> {{ x.dan_toc}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Tôn giáo:</label> {{ x.ton_giao}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Nhóm máu:</label> {{ x.nhom_mau}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Trình độ:</label> {{ x.trinh_do}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Chuyên môn:</label> {{ x.chuyen_mon}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Nghề nghiệp:</label> {{ x.nghe_nghiep}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Là nạn nhân chất độc da cam:</label> {{ x.nan_nhan_da_cam}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Hôn nhân:</label> {{ x.hon_nhan}}
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Tổng số con:</label> {{ x.tong_so_con}}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <label style="color: #000; font-size: 25px; font-weight: bold;"> Số con dưới 16 tuổi:</label> {{ x.so_con_duoi_16}}
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                                                                        Thông tin liên hệ người khuyết tật <span style="color: #2fa4e7; font-weight: bold;">{{x.ho_ten_khai_sinh_nkt}}.</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                                                    <div class="card-body">
+                                                                        <div>
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Địa chỉ liên lạc NKT:</label> {{ x.dia_chi}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Số ĐT liên hệ NKT:</label> {{ x.so_dt_lh}}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Ngày cập nhật:</label> {{ x.ngay_cap_nhat|date:"d/m/Y"}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Người cập nhật:</label> {{ x.nguoi_cap_nhat}}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Họ tên người quản lý:</label> {{ x.ho_ten_nguoi_ql}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Đơn vị công tác:</label> {{ x.don_vi_cong_tac}}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-12">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Lĩnh vực:</label> {{ x.linh_vuc}}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                                                        Thông tin hộ gia đình của <span style="color: #2fa4e7; font-weight: bold;">{{x.ho_ten_khai_sinh_nkt}}.</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                                                    <div class="card-body">
+                                                                        <div>
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Họ tên chủ hộ:</label> {{ x.ho_ten_chu_ho}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Số CMND chủ hộ:</label> {{ x.so_cmnd_chu_ho}}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Mã số định danh chủ hộ:</label> {{ x.ma_so_dinh_danh_chu_ho}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Quốc tịch chủ hộ:</label> {{ x.quoc_tich_chu_ho}}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Chủ hộ quan hệ với NKT:</label> {{ x.quan_he_voi_nkt}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Số ĐT liên lạc hộ gia đình:</label> {{ x.sdt_lien_lac_ho_gia_dinh}}
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                                                                        Thông tin người thân đại diện của <span style="color: #2fa4e7; font-weight: bold;">{{x.ho_ten_khai_sinh_nkt}}.</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                                                    <div class="card-body">
+                                                                        <div>
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Họ tên người đại diện:</label> {{ x.ho_ten_nguoi_dai_dien}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Số CMND người đại dện:</label> {{ x.so_cmnd_nguoi_dai_dien}}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Mã số định danh người đại diện:</label> {{ x.ma_so_dinh_danh_nguoi_dai_dien}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Quốc tịch người đại diện:</label> {{ x.quoc_tich_nguoi_dai_dien}}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Người đại diện quan hệ với NKT:</label> {{ x.ndd_quan_he_voi_nkt}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Số ĐT liên lạc người đại diện:</label> {{ x.sdt_nguoi_dai_dien}}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                                                                        Thông tin người chăm sóc của <span style="color: #2fa4e7; font-weight: bold;">{{x.ho_ten_khai_sinh_nkt}}.</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div id="collapseFive" class="collapse" data-parent="#accordion">
+                                                                    <div class="card-body">
+                                                                        <div>
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Họ tên người chăm sóc:</label> {{ x.ho_ten_nguoi_cham_soc}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Số CMND người chăm sóc:</label> {{ x.so_cmnd_nguoi_cham_soc}}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Mã số định danh người chăm sóc:</label> {{ x.ma_so_dinh_danh_nguoi_cham_soc}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Quốc tịch người chăm sóc:</label> {{ x.quoc_tich_nguoi_cham_soc}}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-row">
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Người chăm sóc quan hệ với NKT:</label> {{ x.ncs_quan_he_voi_nkt}}
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <label style="color: #000; font-size: 25px; font-weight: bold;">Số ĐT liên lạc người chăm sóc:</label> {{ x.so_dt_nguoi_cham_soc}}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                </div>
+
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy bỏ</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <!-----------------------------SỬA THÔNG TIN NGƯỜI KHUYẾT TẬT ----------------------------------------->
+                            <td>
+                                <div class="container">
+                                    <a type="button" class="btn btn-primary" href="{% url 'repair_info_nkt' x.id %}">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                </div>
+                            </td>
+
+                            <!-----------------------------XÓA THÔNG TIN NGƯỜI KHUYẾT TẬT ----------------------------------------->
+                            <td>
+                                <div class="container">
+                                    <!-- Button to Open the Modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-2-{{ x.id }}">
+                                                      <i class="fas fa-trash-alt"></i>
+                                                    </button>
+
+                                    <!-- The Modal -->
+                                    <div class="modal fade" id="myModal-2-{{ x.id }}">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Xóa thông tin</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                    Bạn có chắc chắn muốn xóa thông tin người dùng <span style="color: blue; font-weight: bold;">{{x.ho_ten_khai_sinh_nkt}} ?</span> Thông tin sau khi xóa không thể khôi phục lại.
+                                                </div>
+
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy bỏ</button>
+
+                                                    <!-------- GỌI ID CẦN XÓA VÀ ĐẶT VÀO TRONG MỘT ATTR --------->
+                                                    <button type="button" class="btn btn-danger xoa" data-dismiss="" data-id="{{ x.id }}">Xóa</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+{% endblock %}
