@@ -125,44 +125,52 @@
                                                             alert("Thêm người khuyết tật thành công") // them model nhu cau thanh cong
                                                         } else {
                                                             removeTTDK(so_dinh_danh)
-                                                            alert(resp.msg)
+                                                            $("#alertModalbody")[0].innerHTML = resp.msg;
+                                                            $("#alertModal").modal("toggle")
                                                         }
                                                     },
                                                     error: function(data) {
                                                         console.log(data)
-                                                        alert(data);
+                                                        $("#alertModalbody")[0].innerHTML = data;
+                                                        $("#alertModal").modal("toggle")
                                                     }
                                                 });
                                             } else {
                                                 removeTTDK(so_dinh_danh)
-                                                alert(resp.msg)
+                                                $("#alertModalbody")[0].innerHTML = resp.msg;
+                                                $("#alertModal").modal("toggle")
                                             }
 
                                         },
                                         error: function(data) {
                                             console.log(data)
-                                            alert(data);
+                                            $("#alertModalbody")[0].innerHTML = data;
+                                            $("#alertModal").modal("toggle")
                                         }
                                     });
                                 } else {
                                     removeTTDK(so_dinh_danh)
-                                    alert(resp.msg)
+                                    $("#alertModalbody")[0].innerHTML = resp.msg;
+                                    $("#alertModal").modal("toggle")
 
                                 }
                             },
                             error: function(data) {
                                 console.log(data)
-                                alert(data);
+                                $("#alertModalbody")[0].innerHTML = data;
+                                $("#alertModal").modal("toggle")
                             }
                         });
                     } else {
                         removeTTDK(so_dinh_danh)
-                        alert(resp.msg)
+                        $("#alertModalbody")[0].innerHTML = resp.msg;
+                        $("#alertModal").modal("toggle")
                     }
                 },
                 error: function(data) {
                     console.log(data)
-                    alert(data);
+                    $("#alertModalbody")[0].innerHTML = data;
+                    $("#alertModal").modal("toggle")
                 }
             });
             console.log("Click");

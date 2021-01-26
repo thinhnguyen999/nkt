@@ -118,6 +118,7 @@ def insertTab1(request):
             else:
                 resp['code'] = 403
                 resp['msg'] = str(registerForm.errors)
+                
         else:
             resp['code'] = 403
             resp['msg'] = "Not allow GET"
